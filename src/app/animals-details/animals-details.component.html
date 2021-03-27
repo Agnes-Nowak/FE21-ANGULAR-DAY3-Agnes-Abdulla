@@ -1,0 +1,24 @@
+<!-- <h2>Animals Details</h2>
+
+
+<div *ngIf="pet">
+
+ <h3>{{ pet.petType }}</h3>
+
+ <h4>{{ pet.price | currency }}</h4>
+
+ <p>{{ pet.description }}</p>
+
+
+</div> -->
+
+
+
+<div *ngIf="pet" class="card mb-3">
+    <img src="{{pet.img}}" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">{{ pet.petType }}</h5>
+      <p class="card-text">{{ pet.description }}</p>
+      <p class="card-text"><small class="text-muted">{{ pet.price | currency }}</small></p>
+    </div>
+  </div>

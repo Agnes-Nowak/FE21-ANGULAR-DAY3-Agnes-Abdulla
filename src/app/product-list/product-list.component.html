@@ -1,0 +1,33 @@
+<!-- <h2>Animals available in our shop</h2>
+<div *ngFor="let pet of petsList">
+ <h3>
+     {{ pet.petType }}
+ </h3>
+ <img src="{{pet.img}}" alt="">
+ <p *ngIf="pet.description">
+    Description: {{ pet.description }}
+  </p>
+  <p>Price {{pet.price}} </p>
+</div> -->
+
+<div class="container">
+    <div class="row row-cols-3">
+    <div *ngFor="let pet of petsList; index as petId" class="card col col-lg-4 col-md-6 col-sm-12" style="width: 18rem;">
+       
+            <img src="{{ pet.img }}" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">
+                    <a routerLink="petsList/{{petId}}">
+                    {{ pet.petType }}
+                </a>
+                </h5>
+
+                <p class="card-text" *ngIf="pet.description">
+                    Description: {{ pet.description }}
+                </p>
+                <p>Price {{ pet.price }}</p>
+                <a routerLink="#" class="btn btn-primary">Buy</a>
+            </div>
+        </div>
+    </div>
+</div>

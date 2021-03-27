@@ -1,0 +1,8 @@
+.banner {
+    background-image: url(https://cdn.pixabay.com/photo/2016/08/16/16/15/feather-1598302_960_720.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    height: 50vh;
+}
